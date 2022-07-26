@@ -6,7 +6,7 @@ body {
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
+	bottom:70px;
 	right:40px;
 	background-color:#07f35d;
 	color:#FFF;
@@ -23,6 +23,15 @@ body {
     height: 70px;
 }
 
+h3 {
+    position: fixed;
+    font-size: 30px;
+    color: #FFF;
+    background-color: #07f35d;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
 
 .slider {
     display: flex;
@@ -45,14 +54,40 @@ body {
 
 
 h2 {
-    font-size: 40px;
+    /* font-size: 40px;
     position: fixed;
     background-color: rgba(222, 110, 129, 0.925);
     color: rgba(1, 0, 0, 0.703);
     margin-left: 30px;
     padding: 10px;
-    border: 2px solid rgba(255, 0, 0, 0.703);
+    border: 2px solid rgba(255, 0, 0, 0.703); */
+    font-size: 40px;
+    font-family: monospace;
+    background-color: rgba(222, 110, 129, 0.925);
+    border: 3px solid rgba(255, 0, 0, 0.703);
+    padding: 10px;
+    float: left;
+    color: white;
+    position: absolute;
+    top: 10px;
+    box-shadow: 7px 7px 3px rgb(33, 33, 33);
 }
+h2 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: rgba(222, 110, 129, 0.925);
+    border-left: 1px solid black;
+    animation: maquina 3s infinite alternate steps(30);
+}
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}    
 
 .nav {
     position: fixed;
@@ -82,23 +117,39 @@ h2 {
     position: absolute;
     width: 100%;
     margin-top: -1000px;
+    margin-left: -1000px;
 }
 
 .nav:hover > .nav_ul {
     position: relative;
-    margin-top: -50px;
+    margin-top: -10px;
     transition: 1.2s;
+    margin-left: -40px;
+}
+
+.barra_nav {
+    list-style: none;
 }
 
 @media only screen and (max-width: 600px) {
     h2 {
-        font-size: 30px;
+        font-size: 20px;
+        padding: 5px;
     }
     .nav {
         width: 150px;
-        font-size: 15px;
+        font-size: 12px;
     }
     .nav_li:hover, a:hover {
         font-size: 18px;
+    }
+    h3{
+        font-size: 17px;
+    }
+    #whatsapp {
+        bottom: 50px;
+        width:40px;
+	    height:40px;
+        font-size: 25px;
     }
 }
